@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive gallery</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0 auto;    
+        }
+        
+        #grid {
+            width: 90%;
+            margin: 0px auto;
+            display: grid;
+            gap:20px;
+            justify-content: center;        
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: auto,1fr, 1fr,auto;   
+        }
+
+        .tile {
+            display: flex;
+            width:168px;
+            height: 120px;
+            border-radius: 20px;
+            flex-direction: column;
+            box-sizing: border-box;
+            background-color: white;
+            box-shadow: 1px 1px 1px #efefef;
+        }
+
+        .tile-background {
+            flex-basis: 80%;
+            background-image: url("./placeholder-image.png");
+            background-color: rgb(79 143 193);
+            background-size: contain;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .tile-text {
+            flex-basis: 20%;
+            background-color: #cfcfcf29;
+            font-size: 0.7em;
+            padding: 0.2em;
+            text-align: center;
+            box-sizing: border-box; 
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;            
+        }
+       
+        #paragraph {
+            grid-column: 1 / 6;
+        }
+
+        #heading h1 {
+            font-weight: normal;    
+        }
+
+        #heading {
+            grid-column: 1 / 6;    
+        }
+
+        #wrap {
+            margin:0 auto;
+        }
+
+        @media all and (min-width:769px) and (max-width:1280px) {
+           #grid {
+            gap:16px;
+            }
+            .tile {
+                width:134.4px;
+                height:96px;
+            }
+        }
+           
+        
+        @media all and (min-width:481px) and (max-width:768px) {
+            #grid {
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto 1fr 1fr 1fr 1fr auto;
+            gap:16px;
+            }
+            .tile {
+                width:134.4px;
+                height:96px;
+            }
+            #paragraph {
+            grid-column:1 / 4;
+        }
+       
+        #heading {
+           grid-column:1 / 4;
+        }
+
+        }
+
+        @media all and (max-width:480px) {
+            #grid {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto;
+            }
+           
+            #paragraph {
+            grid-column:1 / 2;
+           
+        }
+       
+        #heading {
+           grid-column:1 / 2;
+        }
+        
+        #heading h1 {
+        font-size: 1.5em;
+        }
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+            
+        <div id="grid">
+        <div id="heading"><h1>Gallery Heading</h1></div>
+        <div class="tile">
+            <div class="tile-background"></div>
+            <div class="tile-text"> Image Title</div>
+        </div>
+        <div class="tile">
+            <div class="tile-background"></div>
+            <div class="tile-text"> Image Title</div>
+        </div>
+        <div class="tile">
+            <div class="tile-background"></div>
+            <div class="tile-text">Image Title</div>
+        </div>
+        <div class="tile">
+            <div class="tile-background"></div>
+            <div class="tile-text"> Image Title</div>
+        </div>
+        <div class="tile">
+            <div class="tile-background"></div>
+            <div class="tile-text"> Image Title</div>
+        </div>
+        <div class="tile">
+            <div class="tile-background"></div>
+            <div class="tile-text"> Image Title</div>
+        </div>
+        <div class="tile">
+            <div class="tile-background"></div>
+            <div class="tile-text"> Image Title</div>
+        </div>
+        <div class="tile">
+            <div class="tile-background"></div>
+            <div class="tile-text"> Image Title</div>
+        </div>
+        <div class="tile">
+            <div class="tile-background"></div>
+            <div class="tile-text"> Image Title</div>
+        </div>
+        <div class="tile">
+            <div class="tile-background"></div>
+            <div class="tile-text"> Image Title</div>
+        </div>
+        <div id="paragraph"> <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p> </div>
+       
+      </div>
+    
+</body>
+</html>
